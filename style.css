@@ -1,0 +1,31 @@
+html{
+    font-family: sans-serif;
+}
+#screen{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+#screen div{
+    border:1px solid black;
+    display: block;
+}
+
+#screen div p{
+    text-align: center;
+    border:1px solid black;
+    display: block;
+    font-size: 2em;
+}
+img{
+    width: 39vw;
+    max-width: 500px;
+}
+button{
+    font-size: 1.2em;
+    min-width:fit-content;
+    width: 13vw;
+    max-width: 167px;
+}
