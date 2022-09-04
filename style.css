@@ -2,20 +2,18 @@ html{
     font-family: sans-serif;
 }
 #screen{
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     gap: 1em;
 }
 
 #screen div{
-    border:1px solid black;
     display: block;
 }
 
 #screen div p{
+    border:2px solid black;
     text-align: center;
-    border:1px solid black;
     display: block;
     font-size: 2em;
 }

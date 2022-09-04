@@ -14,9 +14,32 @@ function randomRPS(){
     }
 }
 
+function pictureChanger(player, pc){
+    if (player == "rock"){
+        document.querySelector("#player-div img").src="./images/rock.png";
+    }
+    if (player == "paper"){
+        document.querySelector("#player-div img").src="./images/paper.png";
+    }
+    if (player == "scissors"){
+        document.querySelector("#player-div img").src="./images/scissors.png";
+    }
+    if (pc == "rock"){
+        document.querySelector("#pc-div img").src="./images/rock.png";
+    }
+    if (pc == "paper"){
+        document.querySelector("#pc-div img").src="./images/paper.png";
+    }
+    if (pc == "scissors"){
+        document.querySelector("#pc-div img").src="./images/scissors.png";
+    }
+
+}
+
 function firstStep(player){
     let pc = randomRPS();
-    alert("player: "+player+" pc: "+pc);
+    pictureChanger(player, pc);
+    //alert("player: "+player+" pc: "+pc);
     if (player == pc){
         return "draw";
     }
@@ -35,21 +58,25 @@ function firstStep(player){
             return "playerLose";
         }
     }
-    else{
-        return "playerWin";
-    }
+    return "playerWin";
 }
 
 function secondStep(result){
     if (result == "draw"){
+        document.querySelector("#screen #player-div p").style="background: #ffffaa;";
+        document.querySelector("#screen #pc-div p").style="background: #ffffaa;";
     }
     if (result == "playerWin"){
+        document.querySelector("#screen #player-div p").style="background: #aaffaa;";
+        document.querySelector("#screen #pc-div p").style="background: #ffaaaa;";
         playerScore++;
-        alert("win");
+        //alert("win");
     }
     if (result == "playerLose"){
+        document.querySelector("#screen #player-div p").style="background: #ffaaaa;";
+        document.querySelector("#screen #pc-div p").style="background: #aaffaa;";
         pcScore++;
-        alert("lose");
+        //alert("lose");
     }
     document.querySelector("#player-div p").innerHTML="Player: "+playerScore;
     document.querySelector("#pc-div p").innerHTML="PC: "+pcScore;
